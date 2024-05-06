@@ -29,7 +29,22 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
+				<configuration>
+                    <classifier>mule-application</classifier>
+                    <cloudHubDeployment>
+                                    <uri>https://anypoint.mulesoft.com</uri>
+                                    <muleVersion>4.5.0</muleVersion>
+                                    <username>redaziii</username>
+                                    <password>Switchers1+</password>
+                                    <applicationName>ci-cd</applicationName>
+                                    <environment>Sandbox</environment>
+                                    <workers>1</workers>
+                            </cloudHubDeployment>
+                    
+                </configuration>
 			</plugin>
+			    
+			
 		</plugins>
 	</build>
 
@@ -59,6 +74,7 @@
 			<version>1.8.2</version>
 			<classifier>mule-plugin</classifier>
 		</dependency>
+		
 	</dependencies>
 
 	<repositories>
